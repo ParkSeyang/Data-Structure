@@ -99,39 +99,35 @@ public:
 
 	void pop_back()
 	{
-		
-
 		if (head == nullptr)
 		{
-			cout << "Linked List is Empty" << endl;
+			cout << endl << "Linked List is Empty (pop_back)" << endl;
+			return;
 		}
-		if (head->next == nullptr)
+		else if (head->next == nullptr)
 		{
-			delete head;
+			Node* deleteNode = head;
 			head = nullptr;
+			delete deleteNode;
 		}
 		else
 		{
-			Node* deleteNode = new Node;
+			Node* previousNode = head;
+			Node* deleteNode = previousNode->next;
 
-			Node* previousNode = new Node;
-
-			previousNode = head;
-
-			while (previousNode->next != nullptr && previousNode->next->next != nullptr)
+			while (deleteNode->next != nullptr)
 			{
+				deleteNode = deleteNode->next;
 				previousNode = previousNode->next;
-
 			}
-			deleteNode = previousNode->next;
-			
 			previousNode->next = nullptr;
-
+			delete deleteNode;
 		}
 
 		size--;
-	}
 
+	}
+	
 };
 
 
@@ -142,16 +138,23 @@ int main()
 
 	singleLinkedList.push_front(10);
 	singleLinkedList.push_front(20);
+
 	singleLinkedList.push_back(5);
 	singleLinkedList.push_back(10);
 	
 	singleLinkedList.Show();
 
 	singleLinkedList.pop_back();
+
+	cout << endl;
+
+	singleLinkedList.Show();
+
 	singleLinkedList.pop_back();
 	singleLinkedList.pop_back();
 	singleLinkedList.pop_back();
 	singleLinkedList.pop_back();
+
     return 0;
 }
 
