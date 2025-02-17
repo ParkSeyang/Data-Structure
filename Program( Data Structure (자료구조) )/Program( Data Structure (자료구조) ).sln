@@ -7,7 +7,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Program", "Program( Data St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestNote", "..\TestNote\TestNote.vcxproj", "{FA1DABDE-59D5-4426-ADD8-ACB772778F29}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication1", "..\ConsoleApplication1\ConsoleApplication1.vcxproj", "{518BEB20-E95C-4C88-B20F-3B7D6E75DC83}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestNote2", "..\ConsoleApplication1\ConsoleApplication1.vcxproj", "{518BEB20-E95C-4C88-B20F-3B7D6E75DC83}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 1th (Singie Linked List)", "..\Class 1th (Singie Linked List)\Class 1th (Singie Linked List).vcxproj", "{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{518BEB20-E95C-4C88-B20F-3B7D6E75DC83}.Release|x64.Build.0 = Release|x64
 		{518BEB20-E95C-4C88-B20F-3B7D6E75DC83}.Release|x86.ActiveCfg = Release|Win32
 		{518BEB20-E95C-4C88-B20F-3B7D6E75DC83}.Release|x86.Build.0 = Release|Win32
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Debug|x64.ActiveCfg = Debug|x64
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Debug|x64.Build.0 = Debug|x64
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Debug|x86.ActiveCfg = Debug|Win32
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Debug|x86.Build.0 = Debug|Win32
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x64.ActiveCfg = Release|x64
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x64.Build.0 = Release|x64
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x86.ActiveCfg = Release|Win32
+		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

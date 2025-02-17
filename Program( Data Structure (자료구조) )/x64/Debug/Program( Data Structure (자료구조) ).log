@@ -1,2 +1,8 @@
 ﻿  Program( Data Structure (자료구조) ).cpp
-  Program( Data Structure (자료구조) ).vcxproj -> C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\x64\Debug\Program.exe
+C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(41,20): error C3861: 'previous': 식별자를 찾을 수 없습니다.
+  C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(41,20):
+  템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
+  	C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(47,2):
+  	컴파일되는 클래스 템플릿 인스턴스화 'DoubleLinkedList<T>'에 대한 참조를 확인하세요.
+  
+C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(41,20): error C2065: 'previous': 선언되지 않은 식별자입니다.
