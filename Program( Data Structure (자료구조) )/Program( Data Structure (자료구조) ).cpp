@@ -29,17 +29,20 @@ public:
 	void push_front(T data)
 	{
 		Node* newNode = new Node;
-
+		newNode->data = data;
 		if (head == nullptr)
 		{
-			head = newNode->data;
-			tail = newNode->data;
+			head = newNode;
+			tail = newNode;
+			newNode->next = nullptr;
+			newNode->previous = nullptr;
 		}
 		else
 		{
-			newNode->previous = newNode->next;
-			newNode->next = previous;
-			newNode->next = nullptr;
+			newNode->next = head;
+			newNode->previous = nullptr;
+			head->previous = newNode;
+			head = newNode;
 		}
 		size++;
 	}
@@ -51,5 +54,6 @@ int main()
 {
 	DoubleLinkedList<int> doubleLinkedList;
 	doubleLinkedList.push_front(5);
+	
 	return 0;
 }
