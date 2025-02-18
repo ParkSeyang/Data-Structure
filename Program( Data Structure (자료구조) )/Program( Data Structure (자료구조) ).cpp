@@ -25,26 +25,114 @@ public:
 		head = nullptr;
 		tail = nullptr;
 	}
-
-	void push_front(T data)
+	void push_front(T data) // 강사님이 만든 예제
 	{
 		Node* newNode = new Node;
+
 		newNode->data = data;
+		newNode->next = nullptr;
+		newNode->previous = nullptr;
+
 		if (head == nullptr)
 		{
 			head = newNode;
 			tail = newNode;
-			newNode->next = nullptr;
-			newNode->previous = nullptr;
 		}
 		else
 		{
-			newNode->next = head;
-			newNode->previous = nullptr;
 			head->previous = newNode;
+			newNode->next = head;
 			head = newNode;
 		}
 		size++;
+	}
+	// void push_front(T data) // 내가만든 예제
+	// {
+	// 	Node* newNode = new Node;
+	// 	newNode->data = data;
+	// 	if (head == nullptr) // 노드가 1개일시
+	// 	{
+	// 		head = newNode;
+	// 		tail = newNode;
+	// 		newNode->next = nullptr;
+	// 		newNode->previous = nullptr;
+	// 	}
+	// 	else // 노드가 두개 일시
+	// 	{
+	// 		newNode->next = head;
+	// 		newNode->previous = nullptr;
+	// 		head->previous = newNode;
+	// 		head = newNode;
+	// 	}
+	// 	size++;
+	// }
+	void pop_front()
+	{
+	
+	if (head == nullptr) // 노드가 없는데 기능을 작동할시
+	{
+		cout << "Linked List is Empty " << endl;
+	}
+	else
+	{
+		Node* deleteNode = head;
+
+		if (head == tail) // 노드가 1개일시 작동
+		{
+			head = nullptr;
+			tail = nullptr;
+		}
+		else // 노드가 2개이상일시 작동
+		{
+			deleteNode->next->previous = nullptr;
+
+			head = head->next;
+		}
+		
+		delete deleteNode;
+	}
+
+	size--;
+	}
+
+	void push_back(T data)
+	{
+		Node* newNode = new Node;
+		newNode->data = data;
+		newNode->previous = nullptr;
+		newNode->next = nullptr;
+
+		if (head == nullptr)
+		{
+			head = newNode;
+			tail = newNode;
+		}
+		else
+		{
+			tail->next = newNode;
+			newNode->previous = tail;
+			tail = newNode;
+		}
+		size++;
+	}
+
+	void show()
+	{
+		Node* currentNode = head;
+		
+		while (currentNode != nullptr)
+		{
+			cout << "CurrentNode Data : " << currentNode->data << endl;
+			currentNode = currentNode->next;
+		}
+	}
+
+	~DoubleLinkedList()
+	{
+		while (head != nullptr)
+		{
+			pop_front();
+		}
 	}
 
 };
@@ -53,7 +141,25 @@ public:
 int main()
 {
 	DoubleLinkedList<int> doubleLinkedList;
-	doubleLinkedList.push_front(5);
+
+	doubleLinkedList.push_front(30);
+	doubleLinkedList.push_front(20);
+	doubleLinkedList.push_front(10);
+
+	doubleLinkedList.show();
 	
+	doubleLinkedList.pop_front();
+	doubleLinkedList.pop_front();
+	
+
+	cout << endl;
+
+	doubleLinkedList.push_back(10);
+
+	doubleLinkedList.show();
+
+	
+
+
 	return 0;
 }
