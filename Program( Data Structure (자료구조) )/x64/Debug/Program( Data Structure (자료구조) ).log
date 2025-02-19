@@ -1,21 +1,2 @@
 ﻿  Program( Data Structure (자료구조) ).cpp
-C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17): error C2440: '=': 'CircleLinkedList<int>::Node *'에서 'T'(으)로 변환할 수 없습니다.
-C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17): error C2440:         with
-C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17): error C2440:         [
-C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17): error C2440:             T=int
-C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17): error C2440:         ]
-  C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17):
-  이 변환이 가능한 컨텍스트가 없습니다.
-  C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(39,17):
-  템플릿 인스턴스화 컨텍스트(가장 오래된 인스턴스화 컨텍스트)가
-  	C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(63,24):
-  	컴파일되는 클래스 템플릿 인스턴스화 'CircleLinkedList<int>'에 대한 참조를 확인하세요.
-  	C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(24,7):
-  	클래스 템플릿 멤버 함수 'void CircleLinkedList<int>::push_back(T)'을(를) 컴파일하는 중입니다.
-          with
-          [
-              T=int
-          ]
-  		C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\Program( Data Structure (자료구조) ).cpp(65,28):
-  		'main'에서 'CircleLinkedList<int>::push_back'에 대한 첫 번째 참조를 확인하세요.
-  
+  Program( Data Structure (자료구조) ).vcxproj -> C:\Users\Administrator\Desktop\Data-Structure\Program( Data Structure (자료구조) )\x64\Debug\Program.exe

@@ -36,7 +36,7 @@ public:
 		{
 			newNode->next = head->next;
 
-			head->data = newNode;
+			head->next = newNode;
 
 			head = newNode;
 		}
@@ -47,6 +47,7 @@ public:
 	void show()
 	{
 		Node* currentNode = head;
+
 		while (currentNode->next != head)
 		{
 			cout << "CurrentNode Data : " << currentNode->data << endl;
