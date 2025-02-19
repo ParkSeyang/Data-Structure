@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestNote2", "..\ConsoleAppl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 1th (Singie Linked List)", "..\Class 1th (Singie Linked List)\Class 1th (Singie Linked List).vcxproj", "{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 2th (Double Linked List)", "..\Class 2th (Double Linked List)\Class 2th (Double Linked List).vcxproj", "{E9238C27-11BC-423A-8506-C44F0359F3EA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x64.Build.0 = Release|x64
 		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x86.ActiveCfg = Release|Win32
 		{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}.Release|x86.Build.0 = Release|Win32
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Debug|x64.ActiveCfg = Debug|x64
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Debug|x64.Build.0 = Debug|x64
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Debug|x86.ActiveCfg = Debug|Win32
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Debug|x86.Build.0 = Debug|Win32
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Release|x64.ActiveCfg = Release|x64
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Release|x64.Build.0 = Release|x64
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Release|x86.ActiveCfg = Release|Win32
+		{E9238C27-11BC-423A-8506-C44F0359F3EA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
