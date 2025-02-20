@@ -5,15 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F70FF297-1E8A-44CB-828D-68756AA60E15}|Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).vcxproj|C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) )\\Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F70FF297-1E8A-44CB-828D-68756AA60E15}|Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).vcxproj|solutionrelative:Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC73C522-BCEA-4B26-B7F9-F648CAF9E39C}|..\\Class 1th (Singie Linked List)\\Class 1th (Singie Linked List).vcxproj|C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\Class 1th (Singie Linked List)\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA1DABDE-59D5-4426-ADD8-ACB772778F29}|..\\TestNote\\TestNote.vcxproj|C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\TestNote\\TestNote.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{518BEB20-E95C-4C88-B20F-3B7D6E75DC83}|..\\ConsoleApplication1\\ConsoleApplication1.vcxproj|C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\ConsoleApplication1\\ConsoleApplication1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,34 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Source.cpp",
-              "DocumentMoniker": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\Class 1th (Singie Linked List)\\Source.cpp",
-              "RelativeDocumentMoniker": "..\\Class 1th (Singie Linked List)\\Source.cpp",
-              "ToolTip": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\Class 1th (Singie Linked List)\\Source.cpp",
-              "RelativeToolTip": "..\\Class 1th (Singie Linked List)\\Source.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-18T08:31:16.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestNote.cpp",
-              "DocumentMoniker": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\TestNote\\TestNote.cpp",
-              "RelativeDocumentMoniker": "..\\TestNote\\TestNote.cpp",
-              "ToolTip": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\TestNote\\TestNote.cpp",
-              "RelativeToolTip": "..\\TestNote\\TestNote.cpp",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAswHgAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-16T19:03:08.545Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -59,22 +24,10 @@
               "RelativeDocumentMoniker": "Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).cpp",
               "ToolTip": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) )\\Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).cpp",
               "RelativeToolTip": "Program( Data Structure (\uC790\uB8CC\uAD6C\uC870) ).cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAuwDYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-13T09:06:13.125Z",
+              "WhenOpened": "2025-02-20T08:14:20.573Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ConsoleApplication1.cpp",
-              "DocumentMoniker": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\ConsoleApplication1\\ConsoleApplication1.cpp",
-              "RelativeDocumentMoniker": "..\\ConsoleApplication1\\ConsoleApplication1.cpp",
-              "ToolTip": "C:\\Users\\ghlwk_sc7hq61\\OneDrive\\Desktop\\\uAC8C\uC784 \uD504\uB85C\uADF8\uB798\uBC0D \uAC1C\uBC1C\uC790 \uC218\uC5C5 \uACFC\uC815\\Data-Structure\\ConsoleApplication1\\ConsoleApplication1.cpp",
-              "RelativeToolTip": "..\\ConsoleApplication1\\ConsoleApplication1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-16T19:10:52.781Z"
             }
           ]
         }

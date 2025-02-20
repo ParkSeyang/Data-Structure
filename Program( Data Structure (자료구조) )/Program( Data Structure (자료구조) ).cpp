@@ -47,13 +47,13 @@ public:
 	void show()
 	{
 		Node* currentNode = head;
-
-		while (currentNode->next != head)
+		do
 		{
 			cout << "CurrentNode Data : " << currentNode->data << endl;
 
 			currentNode = currentNode->next;
-		}
+		} while (currentNode != head);
+	
 	}
 };
 
