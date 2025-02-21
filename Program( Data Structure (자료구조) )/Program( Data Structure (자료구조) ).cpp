@@ -75,13 +75,27 @@ public:
 		{
 			Node* deleteNode = head;
 			Node* currentNode = head;
-			if (true)
+			if (head == head->next)
 			{
-				
+				head = nullptr;
 			}
 			else
 			{
-				currentNode->next->next =
+				while (currentNode->next->next != head->next)
+				{
+					currentNode = currentNode->next;
+				}
+				currentNode->next = head->next;
+
+				head = currentNode;
+
+				// while (currentNode->next != head) 작동방식 2 마지막노드 이전의 노드를찾는방식
+				// {
+				// 	currentNode = currentNode->next;
+				// }
+				// currentNode->next = head->next;
+				// head = currentNode;
+
 			}
 			size--;
 
@@ -186,6 +200,8 @@ int main()
 	
 	circleLinkedList.push_front(15);
 	
+	circleLinkedList.pop_back();
+
 	circleLinkedList.show();
 
 
