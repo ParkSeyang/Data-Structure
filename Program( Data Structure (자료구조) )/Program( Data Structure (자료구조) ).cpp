@@ -1,209 +1,95 @@
 ﻿#include <iostream>
 
+#define SIZE 5
+
 using namespace std;
 
-template <typename T>
-class CircleLinkedList
+template<typename T>
+
+class Stack
 {
 private:
+	int top;
 	int size;
-	struct Node
-	{
-		T data;
-		Node* next;
-	};
-	Node* head;
+	T Container[SIZE];
 public:
-
-	CircleLinkedList()
+	Stack()
 	{
+		top = -1;
 		size = 0;
-		head = nullptr;
+		for (int i = 0; i < SIZE; i++)
+		{
+	      Container[i] = NULL;
+		}
 	}
-	
-	void push_back(T data)
+	void push(T data)
 	{
-		Node* newNode = new Node;
-
-		newNode->data = data;
-
-		if (head == nullptr)
-		{
-			head = newNode;
-			newNode->next = head;
-		}
-		else
-		{
-			newNode->next = head->next;
-
-			head->next = newNode;
-
-			head = newNode;
-		}
-
-		size++;
-	}
-
-	void push_front(T data)
-	{
-		Node* newNode = new Node;
-
-		newNode->data = data;
-
-		if (head == nullptr)
-		{
-			head = newNode;
-			newNode->next = head;
-		}
-		else
-		{
-			newNode->next = head->next;
-	
-			head->next = newNode;
-			
-		}
-		size++;
-	}
-	
-	void pop_back()
-	{
-		if (head == nullptr)
-		{
-			cout << "Linked List is Empty(Pop_back) " << endl;
-		}
-		else
-		{
-			Node* deleteNode = head;
-			Node* currentNode = head;
-			if (head == head->next)
+			if (top >= SIZE - 1)
 			{
-				head = nullptr;
+				cout << "Stack Over flow " << endl;
 			}
 			else
 			{
-				while (currentNode->next->next != head->next)
-				{
-					currentNode = currentNode->next;
-				}
-				currentNode->next = head->next;
-
-				head = currentNode;
-
-				// while (currentNode->next != head) 작동방식 2 마지막노드 이전의 노드를찾는방식
-				// {
-				// 	currentNode = currentNode->next;
-				// }
-				// currentNode->next = head->next;
-				// head = currentNode;
-
+				Container[++top] = data;
 			}
-			size--;
-
-			delete deleteNode;
-		}
+		
 	}
 
-	void pop_front()
+	void pop()
 	{
-		if (head == nullptr)
+		if (Empty())
 		{
-			cout << "Linked List is Empty(Pop_front) " << endl;
+			cout << "Stack is empty " << endl;
 		}
 		else
 		{
-			Node* deleteNode = head->next; // delete노드가 헤드를 가리킴
-			if (head == head->next)
-			{
-				head = nullptr;
-			}
-			// if (size == 1) // 노드가 한개일때 head를 nullptr로 해줌
-			// {
-			// 	head = nullptr;
-			// }
-			else // 노드가 두개이상일때 
-			{
-				head->next = deleteNode->next;
-			}
-			delete deleteNode;
-
-			size--;
+			top--;
 		}
-
 	}
-	~CircleLinkedList()
+	bool Empty()
 	{
-		while (head != nullptr)
+		if (top <= -1)
 		{
-			pop_front();
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
+
+
 	const int& Size()
 	{
+		size = top + 1;
 		return size;
 	}
 
-	 void show()
-	 {
-	 	if (head != nullptr)
-	 	{
-	 		Node* currentNode = head->next;
-	 
-	 		for (int i = 0; i < size; i++)
-	 		{
-	 			cout << currentNode->data << " ";
-	 
-	 			currentNode = currentNode->next;
-	 		}
-	 
-	 	}
-	 }
-	 
-	// void show()
-	// {
-	// 	 Node* currentNode = head->next;
-	// 	do
-	// 	{
-	// 		cout << "CurrentNode Data : " << currentNode->data << endl;
-	// 
-	// 		currentNode = currentNode->next;
-	// 
-	// 	} while (currentNode != head->next);
-	// 
-	// }
-};
+	const T& Top()
+	{
+		return Container[top];
+	}
 
+};
 
 
 int main()
 {
-	CircleLinkedList<int> circleLinkedList;
+	Stack<int> stack;
 
-	circleLinkedList.push_back(10);
-	circleLinkedList.push_back(20);
-	circleLinkedList.push_back(30);
-
-	cout << endl;
-
-	circleLinkedList.pop_front();
-	circleLinkedList.pop_front();
-	circleLinkedList.pop_front();
-	circleLinkedList.pop_front();
-
-	cout << endl;
-
-	circleLinkedList.show();
-
-
-	circleLinkedList.push_front(5);
+	stack.push(10);
+	stack.push(20);
+	stack.push(30);
+	stack.push(40);
+	stack.push(50);
 	
-	circleLinkedList.push_front(10);
+	while (stack.Empty() == false)
+	{
+		cout << stack.Top() << endl;
+		stack.pop();
+	}
+
+
 	
-	circleLinkedList.push_front(15);
-	
-	circleLinkedList.pop_back();
-
-	circleLinkedList.show();
-
-
-	return 0;
+	return 0; 
 }
