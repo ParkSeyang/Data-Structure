@@ -1,28 +1,42 @@
 ﻿#include <iostream>
 
-#define SIZE 4
-
 using namespace std;
 
 template<typename T>
-class CircieQueue
+
+class Vector
 {
 private:
-
-	int front;
-	int rear;
-	T Container[SIZE];
-
+	int size;
+	int capacity;
+	T* container;
 public:
-	CircieQueue()
+	Vector()
 	{
-		front = SIZE-1;
-		rear = SIZE-1;
-		for (int i = 0; i < SIZE; i++)
+		size = 0;
+		capacity = 0;
+		container = nullptr;
+
+	}
+	void push_back(T data)
+	{
+		if ()
 		{
-			Container[i] = NULL
+
 		}
 
+	}
+	void resize(int NewSize)
+	{
+		T* container = new container;
+		if (container != nullptr)
+		{
+	
+		}
+		else
+		{
+
+		}
 	}
 
 };
@@ -30,6 +44,6 @@ public:
 
 int main()
 {
-
-	return 0; 
+	
+	return 0;
 }
