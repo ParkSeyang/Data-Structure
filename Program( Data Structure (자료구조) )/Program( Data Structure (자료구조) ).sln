@@ -23,6 +23,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 6th (Circle Queue)", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 7th (Vector)", "..\Class 7th (Vector)\Class 7th (Vector).vcxproj", "{53476C04-AFC8-4020-BED5-EE8F85E67D72}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Class 8th (String)", "..\Class 8th (String)\Class 8th (String).vcxproj", "{315EFE92-C70E-4319-B1F4-3C3E7076E559}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -111,6 +113,14 @@ Global
 		{53476C04-AFC8-4020-BED5-EE8F85E67D72}.Release|x64.Build.0 = Release|x64
 		{53476C04-AFC8-4020-BED5-EE8F85E67D72}.Release|x86.ActiveCfg = Release|Win32
 		{53476C04-AFC8-4020-BED5-EE8F85E67D72}.Release|x86.Build.0 = Release|Win32
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Debug|x64.ActiveCfg = Debug|x64
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Debug|x64.Build.0 = Debug|x64
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Debug|x86.ActiveCfg = Debug|Win32
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Debug|x86.Build.0 = Debug|Win32
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Release|x64.ActiveCfg = Release|x64
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Release|x64.Build.0 = Release|x64
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Release|x86.ActiveCfg = Release|Win32
+		{315EFE92-C70E-4319-B1F4-3C3E7076E559}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

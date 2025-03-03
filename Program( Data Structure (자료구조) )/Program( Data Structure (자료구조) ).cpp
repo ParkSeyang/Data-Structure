@@ -1,186 +1,63 @@
 ﻿#include <iostream>
-#include <cstring>
+
+#define SIZE 6
 using namespace std;
 
-class String
+template <typename KEY, typename VALUE>
+class HashTable
 {
 private:
-	char* pointer;
-	int size;
+	struct Node
+	{
+		KEY key;
+		VALUE value;
+		Node* next;
+	};
+
+	struct Bucket
+	{
+		int count;
+		Node* head;
+	};
+	Bucket bucket[SIZE];
+
 
 public:
-	String()
+	HashTable()
 	{
-		size = 0;
-		pointer = nullptr;
-	}
-	void operator=(const char * word)
-	{
-		size = strlen(word) + 1;
-		if (pointer == nullptr)
+		for (int i = 0; i < SIZE; i++)
 		{
-			pointer = new char[size];
-
-			for (int i = 0; i < size; i++)
-			{
-				pointer[i] = word[i];
-			}
+			bucket[i].count = 0;
+			bucket[i].head = nullptr;
 		}
-		else
-		{
-			char * newPointer = new char[size];
-
-			for (int i = 0; i < size; i++)
-			{
-				newPointer[i] = word[i];
-			}
-
-			delete [ ] pointer;
-
-			pointer = newPointer;
+	}
+	template<typename T>
+	const int & HashFunction(T key)
+	{
+		unsigned int hashIndex = (int)key % SIZE;
 		
-		}
+		return hashIndex;
 	}
-
-	const char& operator [ ] (const char & index)
+	template<>
+	const int &HashFunction(const char * key)
 	{
-		return pointer[index];
-	}
+		int hash = 0;
 
-	void Append(const char * word)
-	{
-		int resize = size;
-
-		// strlen(pointer) + strlen(word) +1;
-		
-		size = size + strlen(word) + 1;
-
-		char* newPointer = new char[size];
-		
-		// strcpy(newPointer, pointer);
-
-		// strcpy(newPointer, word);
-
-		 for (int i = 0; i < resize; i++)
-		 {
-		 	newPointer[i] = pointer[i];
-		 }
-		 
-		 for (int i = 0; i < strlen(word) + 1; i++)
-		 {
-		 	newPointer[resize + i] = word[i];
-		 }
-
-		if (pointer != nullptr)
+		for (int i = 0; i < strlen(key); i++)
 		{
-			delete[] pointer;
+			hash += key[i];
 		}
-		pointer = newPointer;
+		int hashIndex = hash % SIZE;
 
-		// size = newSize;
+		return hashIndex;
 	}
-
-	long long Find(const char* word)
-	{
-		int wordSize = strlen(word);
-
-		if (pointer == nullptr || word == nullptr)
-		{
-			return -1;
-		}
-		bool found = true;
-		for (int i = 0; i < wordSize; i++)
-		{
-			if (pointer[i] != word[i])
-			{
-				found = false;
-				cout << "Not found word " << endl;
-				break;
-			}
-			if (pointer[i] == word[i])
-			{
-				return i;
-			}
-		}
-		
 	}
-
-	const int& Size()
-	{
-		return size - 1;
-	}
-
-	~String()
-	{
-		if (pointer != nullptr)
-		{
-			delete [ ] pointer;
-		}
-		
-	}
-
 };
+
+
 
 int main()
 {
-	 String string;
-	 
-	 string = "Key";
-	 
-	 for (int i = 0; i<string.Size(); i++)
-	 {
-	 	cout << string[i];
-	 }
-	 
-	 cout << endl;
-	 
-	 string = "Apple";
-	 
-	 for (int i = 0; i < string.Size(); i++)
-	 {
-	 	cout << string[i];
-	 }
-	 
-	 cout << endl;
-	 
-	 string.Append(" Four");
-	 string.Append(" x");
 
-	 string.Find("Ap");
-
-	 for (int i = 0; i < string.Size(); i++)
-	 {
-		 cout << string[i];
-	 }
-
-	 cout << endl;
-
-	 cout << "String Size : " << string.Size() << endl;
-
-	 cout << endl;
-
-	 long long index = string.Find("Four");
-
-	 cout << "Find 'Four' at index: " << index << endl;
-	//  if (index == 1)
-	//  {
-	// 	 cout << "Found Word!" << index << endl;
-	//  }
-	//  else if (index == 0)
-	//  {
-	// 	 cout << "Empty Word!" << endl;
-	//  }
-	//  else
-	//  {
-	// 	 cout << "Not found word" << endl;
-	//  }
-	// std::string str;
-	// str.append("HEllo");
-	// 
-	// for (int i = 0; i < str.size(); i++)
-	// {
-	// 	cout << str[i] << endl;
-	// }
-	
 	return 0;
 }
