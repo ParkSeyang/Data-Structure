@@ -82,24 +82,27 @@ public:
 
 	long long Find(const char* word)
 	{
-		
-		for (int i = 0; i < strlen(word); i++)
+		int wordSize = strlen(word);
+
+		if (pointer == nullptr || word == nullptr)
 		{
-			if (pointer != word)
+			return -1;
+		}
+		bool found = true;
+		for (int i = 0; i < wordSize; i++)
+		{
+			if (pointer[i] != word[i])
 			{
-				for (int i = 0; i < size; i++)
-				{
-
-				}
+				found = false;
+				cout << "Not found word " << endl;
+				break;
 			}
-			else if ()
+			if (pointer[i] == word[i])
 			{
-				for ()
-				{
-
-				}
+				return i;
 			}
 		}
+		
 	}
 
 	const int& Size()
@@ -143,18 +146,34 @@ int main()
 	 string.Append(" Four");
 	 string.Append(" x");
 
+	 string.Find("Ap");
 
 	 for (int i = 0; i < string.Size(); i++)
 	 {
 		 cout << string[i];
 	 }
 
+	 cout << endl;
+
 	 cout << "String Size : " << string.Size() << endl;
 
 	 cout << endl;
 
-	 
+	 long long index = string.Find("Four");
 
+	 cout << "Find 'Four' at index: " << index << endl;
+	//  if (index == 1)
+	//  {
+	// 	 cout << "Found Word!" << index << endl;
+	//  }
+	//  else if (index == 0)
+	//  {
+	// 	 cout << "Empty Word!" << endl;
+	//  }
+	//  else
+	//  {
+	// 	 cout << "Not found word" << endl;
+	//  }
 	// std::string str;
 	// str.append("HEllo");
 	// 
