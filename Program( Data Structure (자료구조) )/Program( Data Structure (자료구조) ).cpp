@@ -1,127 +1,100 @@
 ﻿#include <iostream>
 
-#define SIZE 8
-
 using namespace std;
+
+#define SIZE 10
 template<typename T>
-class PriorityQueue
+class AdjacencyMatrix
 {
 private:
-	int index;
-	T container[SIZE];
+	int size;
+	T vertex[SIZE];
+	int matrix[SIZE][SIZE];
+
+	// 정점의 개수
+	// 정점의 집합
+	//	인접 행렬
 public:
-	PriorityQueue()
+	AdjacencyMatrix()
 	{
-		index = 0;
+		size = 0;
 
-		for (int i = 0; i < SIZE; i++)
+		for (int i = 0; i< SIZE; i++)
 		{
-			container[i] = NULL;
-		}
-	}
-	
-	void push(T data)
-	{
-		if (index + 1 >= SIZE)
-		{
-			cout << "PriorityQueue is over flow" << endl;
-		}
-		else
-		{
-			container[++index] = data;
+			vertex[i] = NULL;
 
-			int child = index;
-			int parent = child / 2;
-
-			while (child > 1)
+			for (int j = 0; j< SIZE; j++)
 			{
-				if (container[parent] < container[child])
-				{
-					std::swap(container[parent], container[child]);
-				}
-				child = parent;
-				parent = child / 2;
-
+				matrix[i][j] = 0;
 			}
 		}
-		
-		
 	}
-	void pop()
+	void push(T data)
 	{
-		if (index <= 0)
+		int index = matrix[i][j];
+		if (size >= SIZE)
 		{
-			cout << "PriorityQueue is empty " << endl;
+			cout << "AdjacencyMatrix is Over flow" << endl;
 		}
 		else
 		{
-			container[1] = container[index];
+			vertex[size++] = data;
+		}
 
-			container[index--] = NULL;
+	}
+	void edge(int i, int j)
+	{
+		if (size <=0)
+		{
+			cout << "AdjacencyMatrix is empty" << endl;
+		}
+		else if (i>=size || j >= size)
+		{
+			cout << "Index Out of Range" << endl;
+		}
+		else
+		{
+			matrix[i][j] = 1;
+			matrix[j][i] = 1;
+		}
+	}
+	void show()
+	{
+		
+		for (int i = 0; i < SIZE; i++)
+		{
+			if ()
+			{
 
-			int parent = 1;
-				
-				while (parent *2 <= index)
+			}
+			else if ()
+			{
+
+			}
+			else
+			{
+
+			}
+			for (int j = 0; j < SIZE; j++)
+			{
+				if (matrix[i][j]  || matrix[j][i])
 				{
-					int child = parent * 2;
-
-					if (container[child] < container[child + 1])
-					{
-						child++;
-					}
-					if (container[child] < container[parent])
-					{
-						break;
-					}
-					else
-					{
-						std::swap(container[parent], container[child]);
-
-						parent = child;
-					}
-				
+					cout << " " << vertex[i] << endl;
 				}
+			}
+			
 
-		}
+			
 
-	}
 
-	const bool empty()
-	{
-		if (index <= 0)
-		{
-			return true;
-		}
-		else
-		{
-			return false;
 		}
 	}
 
-
-	const T& top()
-	{
-		return container[1];
-	}
 };
-
 
 int main()
 {
-	PriorityQueue<int> priorityQueue;
-
-	priorityQueue.push(10);
-	priorityQueue.push(7);
-	priorityQueue.push(3);
-	priorityQueue.push(1);
-	priorityQueue.push(9);
-	priorityQueue.push(18);
-
-	while (priorityQueue.empty() == false)
-	{
-		cout << "PriorityQueue Value: " << priorityQueue.top() << endl;
-		priorityQueue.pop();
-	}
+	AdjacencyMatrix<int> adjacencyMatrix;
 
 	return 0;
 }
