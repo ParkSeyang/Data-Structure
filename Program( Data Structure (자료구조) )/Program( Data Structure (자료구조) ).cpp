@@ -4,97 +4,86 @@ using namespace std;
 
 #define SIZE 10
 template<typename T>
-class AdjacencyMatrix
+class AdjacencyList
 {
 private:
-	int size;
-	T vertex[SIZE];
-	int matrix[SIZE][SIZE];
+	struct Node
+	{
+		T* data;
+		Node* next;
 
-	// 정점의 개수
-	// 정점의 집합
-	//	인접 행렬
+		Node(T data, Node* link = nullptr)
+		{
+			this->data = data;
+			next = link;
+		}
+	};
+
+	int size; // 정점의 개수
+	T vertex[SIZE]; // 정점의 집합
+	Node* list[SIZE]; // 인접 리스트
+
 public:
-	AdjacencyMatrix()
+	AdjacencyList()
 	{
 		size = 0;
 
-		for (int i = 0; i< SIZE; i++)
+		for (int i = 0; i < SIZE; i++)
 		{
+			list[i] = NULL;
 			vertex[i] = NULL;
-
-			for (int j = 0; j< SIZE; j++)
-			{
-				matrix[i][j] = 0;
-			}
 		}
+
 	}
+
 	void push(T data)
-	{
-		int index = matrix[i][j];
-		if (size >= SIZE)
+	{	
+		if (SIZE >= size)
 		{
-			cout << "AdjacencyMatrix is Over flow" << endl;
+			cout << "AdjacencyList  Over flow " << endl;
+
 		}
 		else
 		{
 			vertex[size++] = data;
 		}
-
+		
 	}
+
 	void edge(int i, int j)
 	{
-		if (size <=0)
+		if (size <= 0)
 		{
-			cout << "AdjacencyMatrix is empty" << endl;
+			cout << "AdjacencyList is Empty" << endl;
 		}
-		else if (i>=size || j >= size)
+		else if (i >= size|| j >= size)
 		{
 			cout << "Index Out of Range" << endl;
 		}
 		else
 		{
-			matrix[i][j] = 1;
-			matrix[j][i] = 1;
+			list[i] = new Node(vertex[j], list[i]);
+			list[j] = new Node(vertex[i], list[j]);
 		}
 	}
-	void show()
+
+	~AdjacencyList()
 	{
-		
 		for (int i = 0; i < SIZE; i++)
-		{
-			if ()
+		{	
+			if (list[i] != nullptr)
 			{
-
+				delete[] list[i];
 			}
-			else if ()
-			{
-
-			}
-			else
-			{
-
-			}
-			for (int j = 0; j < SIZE; j++)
-			{
-				if (matrix[i][j]  || matrix[j][i])
-				{
-					cout << " " << vertex[i] << endl;
-				}
-			}
-			
-
-			
-
-
+				
 		}
+	
 	}
-
 };
+
 
 int main()
 {
-	AdjacencyMatrix<int> adjacencyMatrix;
 
 	return 0;
 }
