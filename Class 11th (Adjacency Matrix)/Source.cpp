@@ -1,8 +1,10 @@
 ﻿#include <iostream>
 
+#define SIZE 10
+#define INFINITY 10000000
 using namespace std;
 
-#define SIZE 10
+
 template<typename T>
 class AdjacencyMatrix
 {
